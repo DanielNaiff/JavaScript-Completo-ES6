@@ -48,3 +48,11 @@ var menu = {
 
 menu.backgroundColor = '#000';
 console.log(menu.backgroundColor); // '#000'
+
+var btn = document.querySelector('.btn');
+
+btn.classList.add('azul'); // adiciona a classe azul
+btn.innerText; // 'Clique'
+btn.addEventListener('click', function () {
+  console.log('Clicou');
+});
