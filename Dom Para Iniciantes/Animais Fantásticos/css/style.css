@@ -11,14 +11,6 @@ dl {
   padding: 0px;
 }
 
-html.aumenta {
-  font-size: 150%;
-}
-
-html.diminui {
-  font-size: 50%;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -230,6 +222,7 @@ body {
     margin-bottom: 0px;
   }
 }
+
 .js .js-tabcontent section {
   display: none;
 }
@@ -247,5 +240,34 @@ body {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+.js .js-accordion dd {
+  display: none;
+}
+
+.js-accordion dt::after {
+  content: '⬎';
+  margin-left: 10px;
+}
+
+.js-accordion dt.ativo::after {
+  content: '⬏';
+}
+
+.js-accordion dd.ativo {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    max-height: 200px;
+    opacity: 1;
   }
 }
